@@ -4,6 +4,6 @@ Asabeneh S. Yetayeh'in "[30 Days of JavaScript](https://github.com/Asabeneh/30-D
 
 | # Gün | Konular |
 | ----- | ------- |
-| 01 | Giriş |
+| 01 | [Giriş](./01_Giris/README.md) |
 | 02 | Veri Türleri |
 | .. | güncellenecek .... |
