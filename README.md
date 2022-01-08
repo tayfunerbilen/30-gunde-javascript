@@ -1,6 +1,6 @@
 # 30 Günde Javascript
 
-Asabeneh S. Yetayeh'in "[30 Days of JavaScript](https://github.com/Asabeneh/30-Days-Of-JavaScript)" reposunda oluşturduğu ve 30 günde javascripti öğretmeyi amaçladığı repoyu türkçeleştiriyorum. Aynı zamanda youtube'da birlikte her günü işlemeye başladık, bundan sonra türkçe versiyonlarını bu repo altında toplayacağım
+Asabeneh S. Yetayeh'in "[30 Days of JavaScript](https://github.com/Asabeneh/30-Days-Of-JavaScript)" oluşturduğu ve 30 günde javascripti öğretmeyi hedeflediği repoyu türkçeleştirmekteyim. Aynı zamanda youtube'da birlikte gün gün işlemeye başladık, bundan sonra türkçe versiyonunu bu repodan takip edebilirsiniz.
 
 | # Gün | Konular |
 | ----- | ------- |
