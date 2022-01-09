@@ -25,6 +25,53 @@ Eminim geliştirici olmak için bir bilgisayarınız, internetiniz ve gerekli mo
 
 Şu an için node.js'e ihtiyacınız olmayabilir ancak daha sonrası için ihtiyacınız olacaktır. Node.js'i [buradan](https://nodejs.org/en/) indirin ve kurun.
 
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/download_node.png)
 
+İndirdikten sonra çift tıklayıp kurulumu gerçekleştirin.
+
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/install_node.png)
+
+Bilgisayarınıza node'un yüklenip yüklenmediğini kontrol etmek için terminalinizi açıp şu komutu çalıştırabilirsiniz.
+
+```
+node -v
+# v14.18.1
+```
+
+Bu dökümanı hazırlarken Node'un 14.18.1 sürümünü kullanıyordum, siz de daha yeni sürümü olabilir.
+
+## Tarayıcı
+
+Kullanabileceğiniz bir çok tarayıcı bulunuyor. Ancak, ben sizlere Google Chrome kullanmanızı tavsiye ediyorum.
+
+#### Google Chrome Yükleme
+
+Eğer [Google Chrome](https://www.google.com/chrome/) bilgisayarınızda yüklü değilde indirip kolayca yükleyebilirsiniz. Küçük basit javascript kodlarımızı tarayıcının konsolunda yazabiliriz, ancak uygulama geliştirmek için tabiki de tarayıcı konsollarını kullanmıyoruz.
+
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/google_chrome.png)
+
+#### Google Chrome Konsolu Açmak
+
+Google Chrome konsolunu açmak için sağ üstte bulunan üç noktaya basıp **Diğer Araçlar > Geliştirici Araçları** adımlarını takip edebilir ya da klavye kısayollarını kullanarak açabilirsiniz.
+
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_developer_tool.png)
+
+Klavye kısayolları ise şöyle:
+
+```
+Mac
+Command + Option + J
+
+Window
+CTRL + Shift + J
+```
+
+Ayrıca J yerine C'yi kullanarak konsol açıldığında seçim işlemini de hızlıca gerçekleştirebilirsiniz ama bunun konumuzla bir ilgisi yok ek bilgi vermek istedim :)
+
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_chrome_console_shortcut.png)
+
+Google Chrome konsolunu açtıktan sonra, yukarı görselde işaretlenmiş butonları keşfetmeye bakın. Zamanımızın çoğunu bu konsol'da harcayacağız. Konsol, javascript'i yazacağımız alandır. Google Chrome V8 motoru, javascript kodumuzu alıp makina diline çevirir. Gelin ilk basit javascript kodumuzu konsolda yazalım.
+
+![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/js_code_on_chrome_console.png)
 
 ......... devam edecek .........
