@@ -213,6 +213,124 @@ Aşağıda her birisi tek tek açıklanmıştır.
 
 ### Inline (Satır içi)
 
+Masaüstünüzde **30DaysOfJS** adıyla bir klasör oluşturup içinde `index.html` dosyası oluşturun. Ve aşağıdaki kodu kopyalayıp html dosyanıza yapıştırıp tarayıcınızda açıp bakın.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfScript:Inline Script</title>
+  </head>
+  <body>
+    <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button>
+  </body>
+</html>
+```
+
+İlk örneğinizi başarıyla yaptınız. `alert()` bir yerleşik fonksiyon ve ekranda mesaj göstermenizi sağlıyor. `onclick` niteliği ise `button` etiketine tıklandığında içindeki javascript ifadesini çalıştırmanızı sağlıyor.
+
+### Internal (Dahili)
+
+Dahili script'ler `<head>` ya da `<body>` etiketleri içerisinde `<script>` etiketi olarak tanımlanır ve içine javascript kodları yazılır. Tercihen bu tarz işlemleri `<body>` içinde en sonda yazmanız çok daha iyi olacaktır.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfScript:Internal Script</title>
+    <script>
+      console.log('Welcome to 30DaysOfJavaScript')
+    </script>
+  </head>
+  <body></body>
+</html>
+```
+Yukarıda belirttiğim gibi body içinde yazmak daha çok tercih edilmekte. 
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfScript:Internal Script</title>
+  </head>
+  <body>
+    <button onclick="alert('Welcome to 30DaysOfJavaScript!');">Click Me</button>
+    <script>
+      console.log('Welcome to 30DaysOfJavaScript')
+    </script>
+  </body>
+</html>
+```
+
+`index.html` dosyanızı tarayıcıda açıp konsol'da yazdırdığınız mesaja bakabilirsiniz.
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/js_code_vscode.png)
+
+### External (Harici)
+
+Dahili script'lere benzer olarak harici script'lerde `<head>` ya da `<body>` içerisinde `<script>` etiketi ile kullanılır. Yine tercihen body içinde sonda yazılması daha doğrudur. İlk olarak uzantısı `.js` olan bir javascript dosyası oluşturmamız gerekiyor. Tüm javascript dosyaları `.js` uzantısıyla biterler. Proje klasörünüzde `introduction.js` adıyla bir javascript dosyası oluşturup aşağıdaki kodları yazın ve `index.html` de bu dosyanızı çağırın.
+
+```js
+// introduction.js
+console.log('Welcome to 30DaysOfJavaScript')
+```
+
+`<head>` etiketinde çağırılması
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfJavaScript:External script</title>
+    <script src="introduction.js"></script>
+  </head>
+  <body></body>
+</html>
+```
+
+`<body>` etiketinde çağırılması
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfJavaScript:External script</title>
+  </head>
+  <body>
+    <!-- head ya da body içinde yer alabilir --> 
+    <!-- Burada önerilen yöntemle body içinde kullanıyoruz -->
+    <script src="introduction.js"></script>
+  </body>
+</html>
+```
+
+Tarayıcıda açıp konsolda değer gelip gelmediğine bakabilirsiniz. Eğer bu noktada `<head>` ile `<body>` arasındaki farkı anlamadıysanız şöyle açıklayayım, `<head>` içinde bir javascript dosyası çağırırsanız sayfa bu dosyalar yüklenene kadar açılmayacaktır. Bu da sayfanın açılış hızını etkileyecektir, çünkü her javascript dosyası bir istek demek, her istekte bir cevap döndüğü için bu cevap dönene kadar sayfayı açmayacaktır. `<body>` sonunda yazdığımızda ise sayfayı beklemeden açıp daha sonra bu script dosyalarını yükleyecektir. 
+
+Ayrıca `<head>` içinde javascript ile bir html etiketini seçmek istediğinizde ekstra kod yazmanız gerekir. Çünkü dom'un hazır olup olmadığını bilmeli ve hazır olduğunda o etiketi seçmeniz gerekir diğer türlü etiketi seçemezsiniz. Ancak `<body>` içinde en altta yazdığınızda burası çalıştığında dom çoktan hazır olacağı için bu ekstra işleme ihtiyacınız olmayacak.
+
+### Çoklu External (Dahili)
+
+Birden fazla javascript dosyasını da aynı yöntemle çağırabilirsiniz. `helloworld.js` adında bir dosya oluşturup içine `console.log()` ile bir şeyler yazdırın ve `index.html` de bu dosyayı da çağırın.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple External Scripts</title>
+  </head>
+  <body>
+    <script src="./helloworld.js"></script>
+    <script src="./introduction.js"></script>
+  </body>
+</html>
+```
+
+Birden fazla script'i neden çağırırız? Genelde bir eklenti kullanmak istediniz diyelim, onun javascript dosyasını çağırdınız. Bir de sizin kodlarınızı yazdığınız ana bir javascript dosyanız var, onu her zaman en son çağırdığınızdan emin olun. 
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/multiple_script.png)
+
+## Veri Türlerine Giriş
+
 
 
 ......... devam edecek .........
