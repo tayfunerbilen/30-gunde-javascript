@@ -331,6 +331,87 @@ Birden fazla script'i neden çağırırız? Genelde bir eklenti kullanmak istedi
 
 ## Veri Türlerine Giriş
 
+Javascript ve diğer programlama dillerinde, birden fazla farklı veri türü bulunur. Şunlar javascript'de ilkel (primitive) veri türleri olarak geçmektedir: _String, Number, Boolean, undefined, Null,_ ve _Symbol._ 
+
+### Numbers (Sayılar)
+
+* Tam sayılar (Integer) : (negatif, sıfır, pozitif) sayılar. Örn: (-3, -2, -1, 0, 1, 5, 100 ...)
+* Ondalık sayılar (Floats) : Örn: (-3.5, -1.2, 4.5, 3.14)
+
+### Strings (Metinler)
+
+Tek tırnak, çift tırnak ve backtick karakteri içinde bir ve daha fazla karakterin birleştiği metinler.
+
+```js
+'Asabeneh'
+'Finland'
+'JavaScript is a beautiful programming language'
+'I love teaching'
+'I hope you are enjoying the first day'
+`We can also create a string using a backtick`
+'A string could be just as small as one character as big as many pages'
+```
+
+### Booleans (Mantıksal)
+
+Boolean değeri `true` ya da `false` olabilir. Herhangi bir karşılaştırma geriye boolean değer döndürür. Örneğin 3'ün 5'e eşit olup olmadığına bakarsak geriye `false` dönecektir. Bu da ileride true-false değerlerine göre başka işlemler yaptırmak için sıkça kullanacağız demek oluyor.
+
+```js
+true // ışık açıksa, değer true
+false // ışık kapalıysa, değer false
+```
+
+### Undefined (Tanımsız)
+
+Javascript'de değişkene bir değer atamazsak, değer `undefined` tani tanımsız olacaktır. Buna ek olarak, bir fonksiyon değer döndürmüyorsa yine undefined döndürüyor aslında, fonksiyon ne yeniyor mu diyorsanız, acele etmeyin ısınıyoruz :)
+
+```js
+let firstName
+console.log(firstName) // undefined, çünkü henüz bir değer atanmamış
+```
+
+### Null
+
+Javascript'de null boş değer anlamına gelir.
+
+```js
+let emptyValue = null
+```
+
+## Veri Türlerinin Kontrolü
+
+Bir değişkenin taşıdığı veri türünü öğrenmek için `typeof` operatörünü kullanıyoruz. Örneğin;
+
+```js
+console.log(typeof 'Asabeneh') // string
+console.log(typeof 5) // number
+console.log(typeof true) // boolean
+console.log(typeof null) // object türü
+console.log(typeof undefined) // undefined
+```
+
+## Yorumlar (Tekrar)
+
+Unutmayın, diğer programlama dillerine benzer olarak Javascript'te yorum satırlarına sahip. Yorum yazmak kodunuzu daha okunur kılacaktır. İki farklı şekilde yorum tanımlanabilir.
+
+* Tek satırda
+* Çok satırlı
+
+```js
+// commenting the code itself with a single comment
+// let firstName = 'Asabeneh'; single line comment
+// let lastName = 'Yetayeh'; single line comment
+
+/*
+  let location = 'Helsinki';
+  let age = 100;
+  let isMarried = true;
+  This is a Multiple line comment
+*/
+```
+
+## Değişkenler
+
 
 
 ......... devam edecek .........
