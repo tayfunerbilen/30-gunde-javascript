@@ -229,7 +229,7 @@ Masaüstünüzde **30DaysOfJS** adıyla bir klasör oluşturup içinde `index.ht
 
 İlk örneğinizi başarıyla yaptınız. `alert()` bir yerleşik fonksiyon ve ekranda mesaj göstermenizi sağlıyor. `onclick` niteliği ise `button` etiketine tıklandığında içindeki javascript ifadesini çalıştırmanızı sağlıyor.
 
-### Internal (Dahili)
+### Internal (Dahili)
 
 Dahili script'ler `<head>` ya da `<body>` etiketleri içerisinde `<script>` etiketi olarak tanımlanır ve içine javascript kodları yazılır. Tercihen bu tarz işlemleri `<body>` içinde en sonda yazmanız çok daha iyi olacaktır.
 
@@ -308,7 +308,7 @@ Tarayıcıda açıp konsolda değer gelip gelmediğine bakabilirsiniz. Eğer bu 
 
 Ayrıca `<head>` içinde javascript ile bir html etiketini seçmek istediğinizde ekstra kod yazmanız gerekir. Çünkü dom'un hazır olup olmadığını bilmeli ve hazır olduğunda o etiketi seçmeniz gerekir diğer türlü etiketi seçemezsiniz. Ancak `<body>` içinde en altta yazdığınızda burası çalıştığında dom çoktan hazır olacağı için bu ekstra işleme ihtiyacınız olmayacak.
 
-### Çoklu External (Dahili)
+### Çoklu External (Harici)
 
 Birden fazla javascript dosyasını da aynı yöntemle çağırabilirsiniz. `helloworld.js` adında bir dosya oluşturup içine `console.log()` ile bir şeyler yazdırın ve `index.html` de bu dosyayı da çağırın.
 
@@ -333,12 +333,12 @@ Birden fazla script'i neden çağırırız? Genelde bir eklenti kullanmak istedi
 
 Javascript ve diğer programlama dillerinde, birden fazla farklı veri türü bulunur. Şunlar javascript'de ilkel (primitive) veri türleri olarak geçmektedir: _String, Number, Boolean, undefined, Null,_ ve _Symbol._ 
 
-### Numbers (Sayılar)
+### Numbers (Sayılar)
 
 * Tam sayılar (Integer) : (negatif, sıfır, pozitif) sayılar. Örn: (-3, -2, -1, 0, 1, 5, 100 ...)
 * Ondalık sayılar (Floats) : Örn: (-3.5, -1.2, 4.5, 3.14)
 
-### Strings (Metinler)
+### Strings (Metinler)
 
 Tek tırnak, çift tırnak ve backtick karakteri içinde bir ve daha fazla karakterin birleştiği metinler.
 
@@ -361,7 +361,7 @@ true // ışık açıksa, değer true
 false // ışık kapalıysa, değer false
 ```
 
-### Undefined (Tanımsız)
+### Undefined (Tanımsız)
 
 Javascript'de değişkene bir değer atamazsak, değer `undefined` tani tanımsız olacaktır. Buna ek olarak, bir fonksiyon değer döndürmüyorsa yine undefined döndürüyor aslında, fonksiyon ne yeniyor mu diyorsanız, acele etmeyin ısınıyoruz :)
 
@@ -370,7 +370,7 @@ let firstName
 console.log(firstName) // undefined, çünkü henüz bir değer atanmamış
 ```
 
-### Null
+### Null
 
 Javascript'de null boş değer anlamına gelir.
 
@@ -394,7 +394,7 @@ console.log(typeof undefined) // undefined
 
 Unutmayın, diğer programlama dillerine benzer olarak Javascript'te yorum satırlarına sahip. Yorum yazmak kodunuzu daha okunur kılacaktır. İki farklı şekilde yorum tanımlanabilir.
 
-* Tek satırda
+* Tek satırlı
 * Çok satırlı
 
 ```js
@@ -412,6 +412,116 @@ Unutmayın, diğer programlama dillerine benzer olarak Javascript'te yorum satı
 
 ## Değişkenler
 
+Bir değeri hafızada tutmak ve istediğiniz yerde kullanmak isterseniz bunu değişkenler aracılığıyla yapıyorsunuz. Değişkenler, hafızada değerleri depolarlar. Bir değişken tanımlandığında, hafızada yeri ayrılır. Bir değer atandığında ise, hafızadaki ayrılan yeri bu değerle doldurulur. Değişken tanımlamak için `var`, `let` ve `const` anahtar kelimeleri kullanılır.
 
+Eğer değişkenin değeri zamanla değişebilir bir değerse `let`, eğer değişmez bir değeri varsa `const` ile değişken tanımlayabilirsiniz. Örneğin PI sayısı, ülke adı, yer çekimi gibi sabit değerler değişmeyeceği için `const` ile tanımlanabilir. `let` için ise örneğin maaş, yaş, boy gibi değişebilir değerleri örnek verebiliriz. Elbette bu örnekler gerçek hayattan, programlama yaparkende tek yaptığımız gerçek hayatı sanala aktarmak aslında, o yüzden bu örneklerde yeterince bilgilendirici olabiliyor. `var` anahtar kelimesini kullanarak değişken tanımlamayacağız, artık önerilmiyor, hataya açık ve çok fazla sorun çıkarabilir. Bunu bir başka bölümde konuşuyor olacağız.  Şimdilik bu kadar açıklama yeterli.
 
-......... devam edecek .........
+Geçerli bir javascript değişkeni tanımlarken şunlara dikkat edilmelidir:
+
+* Değişken adı sayı ile başlayamaz.
+* Değişkan adı $ ve _ karakterleri hariç özel karakter içeremez.
+* Değişken adları camelCase olarak tanımlanmalıdır. (Zorunlu değil ancak genel görüş bu yönde olduğu için siz de bu mantıkta tanımlayabilirsiniz)
+* Değişken tanımlarken kelimeler arası boşluk olmamalıdır. Yani "full name" için bir değişken tanımlarken `fullName` şeklinde isimlendirilmelidir.
+
+**camelCase** - İlk kelime hariç her kelimenin baş harfi büyük olacak şekilde yazılması. Örn: _getUserName_ ya da _getElementById_ vb.
+
+Aşağıda geçerli javascript değişken isimlerini inceleyebilirsiniz:
+
+```
+firstName
+lastName
+country
+city
+capitalCity
+age
+isMarried
+
+first_name
+last_name
+is_married
+capital_city
+
+num1
+num_1
+_num_1
+$num1
+year2020
+year_2020
+```
+
+Yukarıdaki listede ilk ve ikinci isimler camelCase tarzında yazılmıştır, biz de bu şekilde yazmaya devam edeceğiz isimlendirmelerimizi. 
+
+Hatalı değişken isimlerine örnekler ise şöyle:
+
+```
+first-name
+1_num
+num_#_1
+```
+
+Artık değişkenleri farklı veri türleri ile tanımlamaya başlayabiliriz. Değişken tanımlamak için `let` ya da `const` anahtar değerini kullandıktan sonra değişkenın adını belirtiyoruz. Değişken adından sonrada = işareti (atama operatörü) kullanarak ona bir değer atıyoruz.
+
+```js
+// Sözdizimi
+let buBirDegiskenAdi = deger
+```
+
+**Farklı veri türlerinde tanımlanmış değişkenlere örnekler**
+
+```js
+let firstName = 'Asabeneh' // kişinin adı
+let lastName = 'Yetayeh' // kişinin soyadı
+let country = 'Finland' // ülkesi
+let city = 'Helsinki' // başkenti
+let age = 100 // yaşı
+let isMarried = true // medeni durumu
+
+console.log(firstName, lastName, country, city, age, isMarried)
+// çıktı: Asabeneh Yetayeh Finland Helsinki 100 true
+```
+
+**Sayısal değerlerle değişken tanımlama örnekleri**
+
+```js
+let age = 100 // yaş
+const gravity = 9.81 // yerçekimi
+const boilingPoint = 100 // suyun kaynama noktası
+const PI = 3.14 // geometrik sabit
+
+console.log(gravity, boilingPoint, PI)
+// çıktı: 9.81 100 3.14
+```
+
+Her değişken tanımlamasında başına `let` ya da `const` koymanıza gerek yok. Virgül ile ayırarak tek tanım ilede değişkenleri tanımlayabilirdik.
+
+```js
+let name = 'Asabeneh',
+    job = 'teacher',
+    live = 'Finland'
+
+console.log(name, job, live)
+// çıktı: Asabeneh teacher Finland
+```
+
+🌕 Harikasın! 1. günü tamamladın ve mükemmeliğe giden yoldasın. Beyin kaslarının çalışması ve tembelleşmemek için bazı egzersizler yapmak isteyebilirsin 1. günde öğrendiklerinle ilgili.
+
+# 💻  1. Gün Egzersizleri
+
+1. "yorum satırları kodları daha okunur kılar" yazan bir tek satırlık yorum satırı tanımlayın.
+2. "30 günde javascripte hoşgeldin" yazan bir tek satırlık yorum satırı tanımlayın.
+3. "yorum satırları kodları daha okunur kılar ve ne işe yaradığı hakkında bizi bilgilendirir" yazan bir çok satırlık yorum satırı tanımlayın.
+4. `variable.js` adında bir dosya oluşturup içine _string, boolean, undefined, null_ veri tiplerini içeren değişkenler tanımlayın.
+5. `datatypes.js` adında bir dosya oluşturup değişkenlerin türlerini `typeof` ile kontrol edin. Her bir değişkeni tek tek kontrol edin.
+6. Dört farklı değişkeni değer atamadan tanımlayın
+7. Dört farklı değişkeni değer atayarak tanımlayın
+8. Adınızı, soyadınızı, yaşınızı ve medeni durumunuzu belirten 4 değişkeni tek tek oluşturun.
+9. Adınızı, soyadınızı, yaşınızı ve medeni durumunuzu belirten 4 değişkeni tek seferde oluşturun.
+10. `myAge` ve `yourAge` adında iki değişken tanımlayın, başlangıç değerlerini belirtin ve tarayıcı konsoluna bu değerleri şu şekilde basın:
+  ```
+  I am 25 years old.
+  You are 30 years old.
+```
+
+🎉  TEBRİKLER ! 🎉
+
+[2. Gün >>](/02_Veri_Turleri/README.md)
