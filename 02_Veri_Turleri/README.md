@@ -1,6 +1,6 @@
 # 📔 2. Gün
 
-## Veri Türleri
+## Veri Türleri
 
 Bir önceki bölümde, veri türlerinden biraz bahsetmiştik. Her değer bir veri türüne sahip. Veri türleri verinin özelliklerini tanımlar. Veri türleri ikiye bölünür:
 
