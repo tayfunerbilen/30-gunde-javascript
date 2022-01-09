@@ -44,19 +44,19 @@ Bu dökümanı hazırlarken Node'un 14.18.1 sürümünü kullanıyordum, siz de 
 
 Kullanabileceğiniz bir çok tarayıcı bulunuyor. Ancak, ben sizlere Google Chrome kullanmanızı tavsiye ediyorum.
 
-#### Google Chrome Yükleme
+#### Google Chrome'u Yükleme
 
-Eğer [Google Chrome](https://www.google.com/chrome/) bilgisayarınızda yüklü değilde indirip kolayca yükleyebilirsiniz. Küçük basit javascript kodlarımızı tarayıcının konsolunda yazabiliriz, ancak uygulama geliştirmek için tabiki de tarayıcı konsollarını kullanmıyoruz.
+Eğer [Google Chrome](https://www.google.com/chrome/) bilgisayarınızda yüklü değilde indirip kolayca yükleyebilirsiniz. Küçük basit javascript kodlarımızı tarayıcının konsolunda yazıyoruz, ancak uygulama geliştirmek için tabiki de tarayıcı konsollarını kullanmıyoruz.
 
 ![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/google_chrome.png)
 
-#### Google Chrome Konsolu Açmak
+#### Google Chrome Konsolunu Açmak
 
-Google Chrome konsolunu açmak için sağ üstte bulunan üç noktaya basıp **Diğer Araçlar > Geliştirici Araçları** adımlarını takip edebilir ya da klavye kısayollarını kullanarak açabilirsiniz.
+Google Chrome konsolunu açmak için sağ üstte bulunan üç noktaya basıp **Diğer Araçlar > Geliştirici Araçları** adımlarını takip edebilir ya da klavye kısayollarını kullanabilirsiniz.
 
 ![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_developer_tool.png)
 
-Klavye kısayolları ise şöyle:
+Klavye kısayolları:
 
 ```
 Mac
@@ -70,8 +70,94 @@ Ayrıca J yerine C'yi kullanarak konsol açıldığında seçim işlemini de hı
 
 ![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_chrome_console_shortcut.png)
 
-Google Chrome konsolunu açtıktan sonra, yukarı görselde işaretlenmiş butonları keşfetmeye bakın. Zamanımızın çoğunu bu konsol'da harcayacağız. Konsol, javascript'i yazacağımız alandır. Google Chrome V8 motoru, javascript kodumuzu alıp makina diline çevirir. Gelin ilk basit javascript kodumuzu konsolda yazalım.
+Google Chrome konsolunu açtıktan sonra, yukarı görselde işaretlenmiş butonları keşfetmeye bakın. Zamanımızın çoğunu **Console** sekmesinde harcayacağız. Console, javascript'i yazacağımız alandır. Google Chrome V8 motoru, javascript kodumuzu alıp makina diline çevirir. Gelin ilk basit javascript kodumuzu konsolda yazalım.
 
 ![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/js_code_on_chrome_console.png)
+
+#### Tarayıcı Konsolunda Kod Yazmak
+
+Herhangi bir javascript kodunu Google ya da herhangi bir tarayıcı konsolunda yazabiliriz. Ama, bu challenge'da biz Google Chrome konsoluna odaklanacağız. Konsolu şu kısayolu kullanarak açın.
+
+```
+Mac
+Command + Option + J
+
+Window
+CTRL + Shift + J
+```
+
+##### Console.log
+
+İlk javascript kodumuzu yazmak için, yerleşik fonksiyon olan `console.log()` fonksiyonunu kullanıyoruz. Parametre olarak bir değer alıyor ve fonksiyon geriye bu değeri basıyor. **Hello World** değerini fonksiyona parametre olarak geçtik.
+
+```js
+console.log('Hello World')
+```
+
+##### Console.log'a birden fazla parametre göndermek
+
+`console.log()` fonksiyonu virgüllerle ayrılacak şekilde birden fazla parametre alabilir. Yani aynı fonksiyon içinde birden fazla değeri konsola basabiliriz. Sözdizi ise şöyledir: `console.log(param1, param2, param3, paramN...)`
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/console_log_multipl_arguments.png)
+
+```js
+console.log('Hello', 'World', '!')
+console.log('HAPPY', 'NEW', 'YEAR', 2020)
+console.log('Welcome', 'to', 30, 'Days', 'Of', 'JavaScript')
+```
+
+Yukarıdaki yazdığımız koddan da göreceğiniz üzere, `console.log()` birden fazla parametre alabilir.
+
+Tebrikler! İlk javascript kodunuzu `console.log()` kullanarak yazdınız.
+
+##### Konsolun amacı
+
+Bu noktada yeni başlayanlar neden konsolda gözükecek bir kod yazdığımızı merak etmiş olabilirler, ilerleyen süreçte javascript ile kod yazarken kodlarımızı **debug** etmek için yani hangi data geliyor, yaptığımız işlem bize ne dönüyor vs. gibi görmek için sıkça konsolu kullanacağız.
+
+##### Yorumlar
+
+Kodlarımıza yorum satırları ekliyoruz. Yorum satırları, kodları daha okunabilir kılmak ve ne işe yaradıklarını belirtmek için çok önemlidir. Özellikle yeni başladıysanız unutmamak için yazdığınız kodların altına ya da üstüne yorum satırı olarak ne işe yaradığını yazabilirsiniz. Javascript, yorum satırlarını kodlarımızla birlikte çalıştırmayacaktır. Yani yorum satırları içine bir javascript ifadesi bile yazsanız çalıştırılmazlar. Amaç sadece yazan ya da projeye sonradan dahil olacak kişilerin işini kolaylaştırmaktır. Javascript'de `//` ile başlayan ya da `/* */` içine yazılan herhangi bir tanım yorun satırı olarak yorumlanır.
+
+**Tek satır yorum örnekleri**
+
+```js
+// This is the first comment
+// This is the second comment
+// I am a single line comment
+```
+
+**Çok satırlı yorum örneği**
+
+```js
+/* 
+  This is a multiline comment
+  Multiline comments can take multiple lines
+  JavaScript is the language of the web
+*/
+```
+
+##### Sözdizimi (Syntax)
+
+Programlama dilleri, insan dillerine çok benzerdir. İngilizce ya da diğer bir çok dilde anlamlı bir cümle kurmak için kelimeler, deyimler vb. kalıplar kullanılır. İngilizcede sözdiziminin anlamı, bir dilde iyi cümleler kurmak için kelimelerin ve deyimlerin düzenlenmesidir. Sözdiziminin teknik tanımı ise, bilgisayar dilindeki ifadelerin yapısıdır. Her programlama dili sözdizimine sahiptir. Javascript'de diğer tüm programlama dillerinde olduğu gibi kendine has bir sözdizimine sahiptir. Eğer Javascript'in anlamayacağı bir şekilde kod yazarsak, bize hata fırlatacaktır. Farklı javascript hatalarına daha sonra bakacağız, şimdilik sözdizimi hatalarına bir gözatalım.
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/raising_syntax_error.png)
+
+1. Tırnak kapatırken başlangıçta hangi tırnak kullanıldıysa onunla kapatılmalıdır.
+2. Tırnak ile açılmış bir değer varsa mutlaka tırnak ile kapatılmalıdır.
+3. `console.log()` fonksiyonunda sondaki parantez mutlaka kapatılmalıdır.
+
+Yukarıda bilerek hata yapılmıştır. Sonuç olarak, konsol bana yazım hatalarıyla ilgili hatalar gösterdi. Aslına bakarsanız, sözdizimi hataları çok bilgilendirici. Ne tarz bir hata yaptığımızla ilgili bizi bilgilendiriyor. Sadece bu hata mesajlarını okuyup yorumlayarak bile hatalarımızı düzeltebiliriz. Bu yüzden buradaki hataları görmezden gelmeyin, bir hata aldığınızda en kötü ihtimalle o hatayı kopyalayıp internette çözümünü aratın, sizden önce bu hatayı almış ve çözüme kavuşmuş olduğunu göreceksiniz.
+
+Şu ana kadar `console.log()` ile konsola metin yazdırmayı öğrendik. Eğer bir metin yazdırıyorsak, yazı tek tırnak, çift tırnak ya da backtick karakterleri içinde olmalıdır. Örneğin;
+
+```js
+console.log('Hello World')
+console.log("Hello World")
+console.log(`Hello World`)
+```
+
+##### Aritmatik İşlemler
+
+
 
 ......... devam edecek .........
