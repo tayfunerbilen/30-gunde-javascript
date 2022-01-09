@@ -40,7 +40,7 @@ node -v
 
 Bu dökümanı hazırlarken Node'un 14.18.1 sürümünü kullanıyordum, siz de daha yeni sürümü olabilir.
 
-## Tarayıcı
+### Tarayıcı
 
 Kullanabileceğiniz bir çok tarayıcı bulunuyor. Ancak, ben sizlere Google Chrome kullanmanızı tavsiye ediyorum.
 
