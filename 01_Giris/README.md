@@ -156,7 +156,62 @@ console.log("Hello World")
 console.log(`Hello World`)
 ```
 
-##### Aritmatik İşlemler
+#### Aritmatik İşlemler
+
+Number veri türünü daha iyi anlamak için `console.log()` u kullanarak chrome console'da daha fazla pratik yapalım. Metinlere ek olarak, matematiksel işlemleri de javascript'de yapabiliriz. Gelin birkaç basit hesaplama işlemi yapalım. Chrome console'unda `console.log()` kullanmadan parametre gönderip işlem yapabilirsiniz. Ancak, bu örneklerin çoğunu editörde yazacağımız için biz yine de `console.log()` kullanarak işlemlerimize devam edelim. 
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/arithmetic.png)
+
+```js
+console.log(2 + 3) // Toplama
+console.log(3 - 2) // Çıkarma
+console.log(2 * 3) // Çarpma
+console.log(3 / 2) // Bölme
+console.log(3 % 2) // Modül - Kalanı bulma
+console.log(3 ** 2) // Üs alma 3 ** 2 == 3 * 3
+```
+
+### Kod Editörü
+
+Kodlarımızı tarayıcı konsolunda yazabiliyoruz gördüğünüz gibi, ancak büyük projeler yazmak için bir editöre ihtiyacımız olacak. Gerçek çalışma ortamlarında, geliştiriciler farklı türde editörler kullanarak geliştirme yapıyorlar. Ben şahsen webStorm IDE'sini tercih ediyorum. Ancak bu challenge'da **Visual Studio Code** editörünü kullanıyor olacağız.
+
+#### VSCode'un Kurulumu
+
+VSCode, çok popüler bir açık kaynaklı kod editörüdür. [Buradan](https://code.visualstudio.com/) indirip kullanmanızı tavsiye ederim, ancak alıştığınız başka bir editör varsa onu kullanmakta da özgürsünüz.
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vscode.png)
+
+Kurulumu yaptıysanız, kullanmaya başlayabiliriz.
+
+#### VSCode Nasıl Kullanılır?
+
+İkonuna çift tıklayarak vscode'u açın. Açtığnızda, aşağıdaki gibi bir arayüzle açılacaktır. İşaretlenmiş alanlara tıklayıp ne işe yaradıklarına bir bakın.
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vscode_ui.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/adding_project_to_vscode.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/opening_project_on_vscode.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/scripts_on_vscode.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vsc_live_server.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/running_script.png)
+
+![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/launched_on_new_tab.png)
+
+## Javascript'i Web Sayfasına Eklemek
+
+Javascript web sayfalarına farklı şekillerde eklenebilir.
+
+* Inline (Satır içi)
+* Internal (Dahili)
+* External (Harici ve Birden Fazla Harici)
+
+Aşağıda her birisi tek tek açıklanmıştır.
+
+### Inline (Satır içi)
 
 
 
