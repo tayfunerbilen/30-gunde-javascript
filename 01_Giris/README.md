@@ -54,7 +54,7 @@ Eğer [Google Chrome](https://www.google.com/chrome/) bilgisayarınızda yüklü
 
 Google Chrome konsolunu açmak için sağ üstte bulunan üç noktaya basıp **Diğer Araçlar > Geliştirici Araçları** adımlarını takip edebilir ya da klavye kısayollarını kullanabilirsiniz.
 
-![](../assets/images/day1/opening_developer_tool.png)
+![opening_developer_tool](../assets/images/day1/opening_developer_tool.png)
 
 Klavye kısayolları:
 
@@ -68,11 +68,11 @@ CTRL + Shift + J
 
 Ayrıca J yerine C'yi kullanarak konsol açıldığında seçim işlemini de hızlıca gerçekleştirebilirsiniz ama bunun konumuzla bir ilgisi yok ek bilgi vermek istedim :)
 
-![](../assets/images/day1/opening_chrome_console_shortcut.png)
+![opening_chrome_console_shortcut](../assets/images/day1/opening_chrome_console_shortcut.png)
 
 Google Chrome konsolunu açtıktan sonra, yukarı görselde işaretlenmiş butonları keşfetmeye bakın. Zamanımızın çoğunu **Console** sekmesinde harcayacağız. Console, javascript'i yazacağımız alandır. Google Chrome V8 motoru, javascript kodumuzu alıp makina diline çevirir. Gelin ilk basit javascript kodumuzu konsolda yazalım.
 
-![](../assets/images/day1/js_code_on_chrome_console.png)
+![js_code_on_chrome_console](../assets/images/day1/js_code_on_chrome_console.png)
 
 #### Tarayıcı Konsolunda Kod Yazmak
 
@@ -98,7 +98,7 @@ console.log('Hello World')
 
 `console.log()` fonksiyonu virgüllerle ayrılacak şekilde birden fazla parametre alabilir. Yani aynı fonksiyon içinde birden fazla değeri konsola basabiliriz. Sözdizi ise şöyledir: `console.log(param1, param2, param3, paramN...)`
 
-![](../assets/images/day1/console_log_multipl_arguments.png)
+![console_log_multipl_arguments](../assets/images/day1/console_log_multipl_arguments.png)
 
 ```js
 console.log('Hello', 'World', '!')
@@ -140,7 +140,7 @@ Kodlarımıza yorum satırları ekliyoruz. Yorum satırları, kodları daha okun
 
 Programlama dilleri, insan dillerine çok benzerdir. İngilizce ya da diğer bir çok dilde anlamlı bir cümle kurmak için kelimeler, deyimler vb. kalıplar kullanılır. İngilizcede sözdiziminin anlamı, bir dilde iyi cümleler kurmak için kelimelerin ve deyimlerin düzenlenmesidir. Sözdiziminin teknik tanımı ise, bilgisayar dilindeki ifadelerin yapısıdır. Her programlama dili sözdizimine sahiptir. Javascript'de diğer tüm programlama dillerinde olduğu gibi kendine has bir sözdizimine sahiptir. Eğer Javascript'in anlamayacağı bir şekilde kod yazarsak, bize hata fırlatacaktır. Farklı javascript hatalarına daha sonra bakacağız, şimdilik sözdizimi hatalarına bir gözatalım.
 
-![](../assets/images/day1/raising_syntax_error.png)
+![raising_syntax_error](../assets/images/day1/raising_syntax_error.png)
 
 1. Tırnak kapatırken başlangıçta hangi tırnak kullanıldıysa onunla kapatılmalıdır.
 2. Tırnak ile açılmış bir değer varsa mutlaka tırnak ile kapatılmalıdır.
@@ -160,7 +160,7 @@ console.log(`Hello World`)
 
 Number veri türünü daha iyi anlamak için `console.log()` u kullanarak chrome console'da daha fazla pratik yapalım. Metinlere ek olarak, matematiksel işlemleri de javascript'de yapabiliriz. Gelin birkaç basit hesaplama işlemi yapalım. Chrome console'unda `console.log()` kullanmadan parametre gönderip işlem yapabilirsiniz. Ancak, bu örneklerin çoğunu editörde yazacağımız için biz yine de `console.log()` kullanarak işlemlerimize devam edelim. 
 
-![](../assets/images/day1/arithmetic.png)
+![arithmetic](../assets/images/day1/arithmetic.png)
 
 ```js
 console.log(2 + 3) // Toplama
@@ -179,7 +179,7 @@ Kodlarımızı tarayıcı konsolunda yazabiliyoruz gördüğünüz gibi, ancak b
 
 VSCode, çok popüler bir açık kaynaklı kod editörüdür. [Buradan](https://code.visualstudio.com/) indirip kullanmanızı tavsiye ederim, ancak alıştığınız başka bir editör varsa onu kullanmakta da özgürsünüz.
 
-![](../assets/images/day1/vscode.png)
+![vscode](../assets/images/day1/vscode.png)
 
 Kurulumu yaptıysanız, kullanmaya başlayabiliriz.
 
@@ -187,19 +187,19 @@ Kurulumu yaptıysanız, kullanmaya başlayabiliriz.
 
 İkonuna çift tıklayarak vscode'u açın. Açtığnızda, aşağıdaki gibi bir arayüzle açılacaktır. İşaretlenmiş alanlara tıklayıp ne işe yaradıklarına bir bakın.
 
-![](../assets/images/day1/vscode_ui.png)
+![vscode_ui](../assets/images/day1/vscode_ui.png)
 
-![](../assets/images/day1/adding_project_to_vscode.png)
+![adding_project_to_vscode](../assets/images/day1/adding_project_to_vscode.png)
 
-![](../assets/images/day1/opening_project_on_vscode.png)
+![opening_project_on_vscode](../assets/images/day1/opening_project_on_vscode.png)
 
-![](../assets/images/day1/scripts_on_vscode.png)
+![scripts_on_vscode](../assets/images/day1/scripts_on_vscode.png)
 
-![](../assets/images/day1/vsc_live_server.png)
+![vsc_live_server](../assets/images/day1/vsc_live_server.png)
 
-![](../assets/images/day1/running_script.png)
+![running_script](../assets/images/day1/running_script.png)
 
-![](../assets/images/day1/launched_on_new_tab.png)
+![launched_on_new_tab](../assets/images/day1/launched_on_new_tab.png)
 
 ## Javascript'i Web Sayfasına Eklemek
 
@@ -264,7 +264,7 @@ Yukarıda belirttiğim gibi body içinde yazmak daha çok tercih edilmekte.
 
 `index.html` dosyanızı tarayıcıda açıp konsol'da yazdırdığınız mesaja bakabilirsiniz.
 
-![](../assets/images/day1/js_code_vscode.png)
+![js_code_vscode](../assets/images/day1/js_code_vscode.png)
 
 ### External (Harici)
 
@@ -327,7 +327,7 @@ Birden fazla javascript dosyasını da aynı yöntemle çağırabilirsiniz. `hel
 
 Birden fazla script'i neden çağırırız? Genelde bir eklenti kullanmak istediniz diyelim, onun javascript dosyasını çağırdınız. Bir de sizin kodlarınızı yazdığınız ana bir javascript dosyanız var, onu her zaman en son çağırdığınızdan emin olun. 
 
-![](../assets/images/day1/multiple_script.png)
+![multiple_script](../assets/images/day1/multiple_script.png)
 
 ## Veri Türlerine Giriş
 
@@ -503,7 +503,7 @@ console.log(name, job, live)
 // çıktı: Asabeneh teacher Finland
 ```
 
-![](../assets/images/day1/summary.png)
+![summary](../assets/images/day1/summary.png)
 
 🌕 Harikasın! 1. günü tamamladın ve mükemmeliğe giden yoldasın. Beyin kaslarının çalışması ve tembelleşmemek için bazı egzersizler yapmak isteyebilirsin 1. günde öğrendiklerinle ilgili.
 
