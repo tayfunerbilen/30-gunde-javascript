@@ -110,7 +110,7 @@ const bodyTemp = 37      // ortalama insan vücudu sıcaklığı aynı zamanda s
 
 console.log(age, gravity, mass, PI, boilingPoint, bodyTemp)
 ```
-### Math Nesnesi
+### Math Nesnesi
 
 Javascript'de `Math` objesi sayılarla çalışmamız için gereken metodları sağlar.
 
@@ -256,9 +256,9 @@ Javascript ve diğer programlama dillerinde \ işaretinden sonra bazı karakterl
 
 - \n : yeni satır
 - \t : tab - 8 boşluk
-- \\ : ters slash
-- \' : tek tırnak
-- \" : çift tırnak
+- \\\ : ters slash
+- \\' : tek tırnak
+- \\" : çift tırnak
 
 ```js
 console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?') // line break
@@ -275,7 +275,7 @@ console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
 
 Konsol çıktısı:
 
-```js
+```
 I hope everyone is enjoying the 30 Days Of JavaScript challenge.
 Do you ?
 Days  Topics  Exercises
@@ -299,7 +299,7 @@ Yukarıda anlatılan tamamını unutun. Template stringleri kullanarak artık bi
 `String literal text ${expression}`
 ```
 
-** Örnek 1 **
+__Örnek 1__
 
 ```js
 console.log(`The sum of 2 and 3 is 5`)              // statik olarak veriyi yazmak
@@ -308,7 +308,7 @@ let b = 3
 console.log(`The sum of ${a} and ${b} is ${a + b}`) // veriyi dinamik olarak yazmak
 ```
 
-** Örnek 2 **
+__Örnek 2__
 
 ```js
 let firstName = 'Asabeneh'
@@ -349,7 +349,7 @@ Javascript'de herşey bir nesnedir. Stringler primitive (ilkel) veri türleridir
 
 1. `length` : Bu metod karakterin uzunluğunu döndürür. Boşluklar ve tüm özel karakterler dahil olmak üzere.
 
-** Örnek **
+__Örnek__
 
 ```js
 let js = 'JavaScript'
@@ -424,4 +424,110 @@ let country = 'Finland'
 console.log(country.substr(3, 4))   // land
 ```
 
-... devam edecek ...
+6. `substring()` : İki parametre alır, başlangıç indexi ve bitiş indexi. Ancak bitiş indexindeki karakter dahil olmaz.
+
+```js
+let string = 'JavaScript'
+
+console.log(string.substring(0,4))     // Java
+console.log(string.substring(4,10))    // Script
+console.log(string.substring(4))       // Script
+
+let country = 'Finland'
+
+console.log(country.substring(0, 3))   // Fin
+console.log(country.substring(3, 7))   // land
+console.log(country.substring(3))      // land
+```
+
+7. `split()` : Belirtilen bir ayraç yardımı ile string'i parçalar.
+
+```js
+let string = '30 Days Of JavaScript'
+
+console.log(string.split())     // Diziye dönüştürür -> ["30 Days Of JavaScript"]
+console.log(string.split(' '))  // boşluktan parçalayıp diziye dönüştürür -> ["30", "Days", "Of", "JavaScript"]
+
+let firstName = 'Asabeneh'
+
+console.log(firstName.split())    // Diziye dönüştürür - > ["Asabeneh"]
+console.log(firstName.split(''))  // Boş string verilirse harfleri diziye dönüştürür ->  ["A", "s", "a", "b", "e", "n", "e", "h"]
+
+let countries = 'Finland, Sweden, Norway, Denmark, and Iceland'
+
+console.log(countries.split(','))  // Virgül ile parçalarayak diziye dönüştürür -> ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
+console.log(countries.split(', ')) // Diğerinden farklı olarak boşluk olmasını engeller ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
+```
+
+8. `trim()` : Başlangıçtaki ve sondaki gereksiz boşlukları kaldırır.
+
+```js
+let string = '   30 Days Of JavaScript   '
+
+console.log(string)
+console.log(string.trim(' '))
+
+let firstName = ' Asabeneh '
+
+console.log(firstName)
+console.log(firstName.trim())  // bir değer girmedende aynı işlemi yapmaya devam eder
+```
+
+```
+   30 Days Of JavasCript   
+30 Days Of JavasCript
+  Asabeneh 
+Asabeneh
+```
+
+9. `includes()` : String içinde belirtilen string'in olup olmadığını kontrol eder. Aratılan değer varsa `true` yoksa `false` değeri döner. 
+
+```js
+let string = '30 Days Of JavaScript'
+
+console.log(string.includes('Days'))     // true
+console.log(string.includes('days'))     // false - büyük-küçük harf duyarlı!
+console.log(string.includes('Script'))   // true
+console.log(string.includes('script'))   // false
+console.log(string.includes('java'))     // false
+console.log(string.includes('Java'))     // true
+
+let country = 'Finland'
+
+console.log(country.includes('fin'))     // false
+console.log(country.includes('Fin'))     // true
+console.log(country.includes('land'))    // true
+console.log(country.includes('Land'))    // false
+```
+
+10. `replace()` : İki parametre alır, ilk parametre değiştirilecek string, ikinci parametre değiştirilmesini istediği string. 
+
+```js
+let string = '30 Days Of JavaScript'
+console.log(string.replace('JavaScript', 'Python')) // 30 Days Of Python
+
+let country = 'Finland'
+console.log(country.replace('Fin', 'Noman'))       // Nomanland
+```
+
+11. `charAt()` : Parametre olarak index alır ve o indexe ait karakteri döndürür.
+
+```js
+let string = '30 Days Of JavaScript'
+console.log(string.charAt(0))        // 3
+
+let lastIndex = string.length - 1
+console.log(string.charAt(lastIndex)) // t
+```
+
+12. `charCodeAt()` : Parametre olarak index alır ve o indexe ait ASCII karşılığını döndürür.
+
+```js
+let string = '30 Days Of JavaScript'
+console.log(string.charCodeAt(3))        // D ASCII numarası 68
+
+let lastIndex = string.length - 1
+console.log(string.charCodeAt(lastIndex)) // t ASCII numarası 116
+```
+Bunu anlamadım ben deyip kafanıza takmayın, şimdilik bir önemi yok bilin yeter.
+
