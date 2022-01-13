@@ -25,11 +25,11 @@ Eminim geliştirici olmak için bir bilgisayarınız, internetiniz ve gerekli mo
 
 Şu an için node.js'e ihtiyacınız olmayabilir ancak daha sonrası için ihtiyacınız olacaktır. Node.js'i [buradan](https://nodejs.org/en/) indirin ve kurun.
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/download_node.png)
+![node](../assets/images/day1/node.png)
 
 İndirdikten sonra çift tıklayıp kurulumu gerçekleştirin.
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/install_node.png)
+![install_node](../assets/images/day1/install_node.png)
 
 Bilgisayarınıza node'un yüklenip yüklenmediğini kontrol etmek için terminalinizi açıp şu komutu çalıştırabilirsiniz.
 
@@ -48,13 +48,13 @@ Kullanabileceğiniz bir çok tarayıcı bulunuyor. Ancak, ben sizlere Google Chr
 
 Eğer [Google Chrome](https://www.google.com/chrome/) bilgisayarınızda yüklü değilde indirip kolayca yükleyebilirsiniz. Küçük basit javascript kodlarımızı tarayıcının konsolunda yazıyoruz, ancak uygulama geliştirmek için tabiki de tarayıcı konsollarını kullanmıyoruz.
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/google_chrome.png)
+![google_chrome](../assets/images/day1/google_chrome.png)
 
 #### Google Chrome Konsolunu Açmak
 
 Google Chrome konsolunu açmak için sağ üstte bulunan üç noktaya basıp **Diğer Araçlar > Geliştirici Araçları** adımlarını takip edebilir ya da klavye kısayollarını kullanabilirsiniz.
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_developer_tool.png)
+![](../assets/images/day1/opening_developer_tool.png)
 
 Klavye kısayolları:
 
@@ -68,11 +68,11 @@ CTRL + Shift + J
 
 Ayrıca J yerine C'yi kullanarak konsol açıldığında seçim işlemini de hızlıca gerçekleştirebilirsiniz ama bunun konumuzla bir ilgisi yok ek bilgi vermek istedim :)
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/opening_chrome_console_shortcut.png)
+![](../assets/images/day1/opening_chrome_console_shortcut.png)
 
 Google Chrome konsolunu açtıktan sonra, yukarı görselde işaretlenmiş butonları keşfetmeye bakın. Zamanımızın çoğunu **Console** sekmesinde harcayacağız. Console, javascript'i yazacağımız alandır. Google Chrome V8 motoru, javascript kodumuzu alıp makina diline çevirir. Gelin ilk basit javascript kodumuzu konsolda yazalım.
 
-![](https://raw.githubusercontent.com/Asabeneh/30-Days-Of-JavaScript/master/images/js_code_on_chrome_console.png)
+![](../assets/images/day1/js_code_on_chrome_console.png)
 
 #### Tarayıcı Konsolunda Kod Yazmak
 
@@ -98,7 +98,7 @@ console.log('Hello World')
 
 `console.log()` fonksiyonu virgüllerle ayrılacak şekilde birden fazla parametre alabilir. Yani aynı fonksiyon içinde birden fazla değeri konsola basabiliriz. Sözdizi ise şöyledir: `console.log(param1, param2, param3, paramN...)`
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/console_log_multipl_arguments.png)
+![](../assets/images/day1/console_log_multipl_arguments.png)
 
 ```js
 console.log('Hello', 'World', '!')
@@ -140,7 +140,7 @@ Kodlarımıza yorum satırları ekliyoruz. Yorum satırları, kodları daha okun
 
 Programlama dilleri, insan dillerine çok benzerdir. İngilizce ya da diğer bir çok dilde anlamlı bir cümle kurmak için kelimeler, deyimler vb. kalıplar kullanılır. İngilizcede sözdiziminin anlamı, bir dilde iyi cümleler kurmak için kelimelerin ve deyimlerin düzenlenmesidir. Sözdiziminin teknik tanımı ise, bilgisayar dilindeki ifadelerin yapısıdır. Her programlama dili sözdizimine sahiptir. Javascript'de diğer tüm programlama dillerinde olduğu gibi kendine has bir sözdizimine sahiptir. Eğer Javascript'in anlamayacağı bir şekilde kod yazarsak, bize hata fırlatacaktır. Farklı javascript hatalarına daha sonra bakacağız, şimdilik sözdizimi hatalarına bir gözatalım.
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/raising_syntax_error.png)
+![](../assets/images/day1/raising_syntax_error.png)
 
 1. Tırnak kapatırken başlangıçta hangi tırnak kullanıldıysa onunla kapatılmalıdır.
 2. Tırnak ile açılmış bir değer varsa mutlaka tırnak ile kapatılmalıdır.
@@ -160,7 +160,7 @@ console.log(`Hello World`)
 
 Number veri türünü daha iyi anlamak için `console.log()` u kullanarak chrome console'da daha fazla pratik yapalım. Metinlere ek olarak, matematiksel işlemleri de javascript'de yapabiliriz. Gelin birkaç basit hesaplama işlemi yapalım. Chrome console'unda `console.log()` kullanmadan parametre gönderip işlem yapabilirsiniz. Ancak, bu örneklerin çoğunu editörde yazacağımız için biz yine de `console.log()` kullanarak işlemlerimize devam edelim. 
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/arithmetic.png)
+![](../assets/images/day1/arithmetic.png)
 
 ```js
 console.log(2 + 3) // Toplama
@@ -179,7 +179,7 @@ Kodlarımızı tarayıcı konsolunda yazabiliyoruz gördüğünüz gibi, ancak b
 
 VSCode, çok popüler bir açık kaynaklı kod editörüdür. [Buradan](https://code.visualstudio.com/) indirip kullanmanızı tavsiye ederim, ancak alıştığınız başka bir editör varsa onu kullanmakta da özgürsünüz.
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vscode.png)
+![](../assets/images/day1/vscode.png)
 
 Kurulumu yaptıysanız, kullanmaya başlayabiliriz.
 
@@ -187,19 +187,19 @@ Kurulumu yaptıysanız, kullanmaya başlayabiliriz.
 
 İkonuna çift tıklayarak vscode'u açın. Açtığnızda, aşağıdaki gibi bir arayüzle açılacaktır. İşaretlenmiş alanlara tıklayıp ne işe yaradıklarına bir bakın.
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vscode_ui.png)
+![](../assets/images/day1/vscode_ui.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/adding_project_to_vscode.png)
+![](../assets/images/day1/adding_project_to_vscode.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/opening_project_on_vscode.png)
+![](../assets/images/day1/opening_project_on_vscode.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/scripts_on_vscode.png)
+![](../assets/images/day1/scripts_on_vscode.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/vsc_live_server.png)
+![](../assets/images/day1/vsc_live_server.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/running_script.png)
+![](../assets/images/day1/running_script.png)
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/launched_on_new_tab.png)
+![](../assets/images/day1/launched_on_new_tab.png)
 
 ## Javascript'i Web Sayfasına Eklemek
 
@@ -264,7 +264,7 @@ Yukarıda belirttiğim gibi body içinde yazmak daha çok tercih edilmekte.
 
 `index.html` dosyanızı tarayıcıda açıp konsol'da yazdırdığınız mesaja bakabilirsiniz.
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/js_code_vscode.png)
+![](../assets/images/day1/js_code_vscode.png)
 
 ### External (Harici)
 
@@ -327,7 +327,7 @@ Birden fazla javascript dosyasını da aynı yöntemle çağırabilirsiniz. `hel
 
 Birden fazla script'i neden çağırırız? Genelde bir eklenti kullanmak istediniz diyelim, onun javascript dosyasını çağırdınız. Bir de sizin kodlarınızı yazdığınız ana bir javascript dosyanız var, onu her zaman en son çağırdığınızdan emin olun. 
 
-![](https://github.com/Asabeneh/30-Days-Of-JavaScript/raw/master/images/multiple_script.png)
+![](../assets/images/day1/multiple_script.png)
 
 ## Veri Türlerine Giriş
 
@@ -502,6 +502,8 @@ let name = 'Asabeneh',
 console.log(name, job, live)
 // çıktı: Asabeneh teacher Finland
 ```
+
+![](../assets/images/day1/summary.png)
 
 🌕 Harikasın! 1. günü tamamladın ve mükemmeliğe giden yoldasın. Beyin kaslarının çalışması ve tembelleşmemek için bazı egzersizler yapmak isteyebilirsin 1. günde öğrendiklerinle ilgili.
 
