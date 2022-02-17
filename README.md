@@ -13,3 +13,4 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [5. Gün - Diziler](https://www.youtube.com/watch?v=OWevID6C7j0)
 * [6. Gün - Döngüler](https://www.youtube.com/watch?v=B_grs48l5gA)
 * [7. Gün - Fonksiyonlar](https://www.youtube.com/watch?v=fCewgC4rgWs)
+* [8. Gün - Kapsam, Nesneler](https://www.youtube.com/watch?v=isASqtTf1Vs)
