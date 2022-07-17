@@ -14,3 +14,5 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [6. Gün - Döngüler](https://www.youtube.com/watch?v=B_grs48l5gA)
 * [7. Gün - Fonksiyonlar](https://www.youtube.com/watch?v=fCewgC4rgWs)
 * [8. Gün - Kapsam, Nesneler](https://www.youtube.com/watch?v=isASqtTf1Vs)
+* [9. Gün - Higher Order Fonksiyonlar](https://www.youtube.com/watch?v=_Yg5xml3mC4)
+* [10. Gün - Set, Map](https://www.youtube.com/watch?v=TwqhonAoZfQ)
