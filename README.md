@@ -16,3 +16,4 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [8. Gün - Kapsam, Nesneler](https://www.youtube.com/watch?v=isASqtTf1Vs)
 * [9. Gün - Higher Order Fonksiyonlar](https://www.youtube.com/watch?v=_Yg5xml3mC4)
 * [10. Gün - Set, Map](https://www.youtube.com/watch?v=TwqhonAoZfQ)
+* [11. Gün - Destructuring, Spread, Rest](https://www.youtube.com/watch?v=evy8I07Oim0)
