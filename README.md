@@ -20,3 +20,5 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [12. Gün - Düzenli İfadeler, RegExp](https://www.youtube.com/watch?v=iDN5hmCc8s8)
 * [13. Gün - Console Metodları](https://www.youtube.com/watch?v=CZPyKqSsCbc)
 * [14. Gün - Hata Yönetimi](https://www.youtube.com/watch?v=hCLH_HDX6G0)
+* [15. Gün - Sınıflar](https://www.youtube.com/watch?v=vuSV9yq3fgQ)
+* [16. Gün - JSON](https://www.youtube.com/watch?v=BZvLCGQvbs8)
