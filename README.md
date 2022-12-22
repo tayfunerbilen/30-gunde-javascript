@@ -17,3 +17,6 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [9. Gün - Higher Order Fonksiyonlar](https://www.youtube.com/watch?v=_Yg5xml3mC4)
 * [10. Gün - Set, Map](https://www.youtube.com/watch?v=TwqhonAoZfQ)
 * [11. Gün - Destructuring, Spread, Rest](https://www.youtube.com/watch?v=evy8I07Oim0)
+* [12. Gün - Düzenli İfadeler, RegExp](https://www.youtube.com/watch?v=iDN5hmCc8s8)
+* [13. Gün - Console Metodları](https://www.youtube.com/watch?v=CZPyKqSsCbc)
+* [14. Gün - Hata Yönetimi](https://www.youtube.com/watch?v=hCLH_HDX6G0)
