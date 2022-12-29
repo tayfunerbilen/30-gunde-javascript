@@ -22,3 +22,7 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [14. Gün - Hata Yönetimi](https://www.youtube.com/watch?v=hCLH_HDX6G0)
 * [15. Gün - Sınıflar](https://www.youtube.com/watch?v=vuSV9yq3fgQ)
 * [16. Gün - JSON](https://www.youtube.com/watch?v=BZvLCGQvbs8)
+* [17. Gün - Web Storage](https://www.youtube.com/watch?v=OicvaygNn5M)
+* [18. Gün - Promise, Fetch, Async/Await](https://www.youtube.com/watch?v=abyMOwipR9E)
+* [19. Gün - Closure](https://www.youtube.com/watch?v=Pe3XVMooHVc)
+* [20. Gün - Temiz Kod Yazmak](https://www.youtube.com/watch?v=XPa5yQIm5NM)
