@@ -173,3 +173,209 @@ console.log(
 )
 </script>
 ```
+
+### `scrollLeft` ve `scrollTop`
+
+- `scrollLeft` - Scroll olan elemanın soldan mesafesini döndürür. Ayrıca soldan mesafesini ayarlamak içinde aynı özellik kullanılır.
+- `scrollWidth` - Scroll olan elemanın yukarıdan mesafesini döndürür. Ayrıca yukarıdan mesafesini ayarlamak içinde aynı özellik kullanılır.
+
+```html
+<div class="scroll-content" style="height: 70px; overflow: auto">
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+  test <br>
+</div>
+
+<script>
+document.querySelector('.scroll-content').scrollTop += 100
+
+console.log(
+    document.querySelector('.scroll-content').scrollTop
+)
+</script>
+```
+
+```html
+<div class="scroll-content" style="width: 200px; display: flex; white-space: nowrap; overflow: auto">
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+  <div style="width:100px; flex-shrink: 0">test</div>
+</div>
+
+<script>
+document.querySelector('.scroll-content').scrollLeft += 100
+
+console.log(
+    document.querySelector('.scroll-content').scrollLeft
+)
+</script>
+```
+
+### `tagName`
+
+Seçilen öğenin etiket ismini döndürür.
+
+```html
+<h1 class="test">Başlık</h1>
+<p class="test">paragraf</p>
+<div class="test">div</div>
+
+<script>
+const elements = document.querySelectorAll('.test')
+for (const element of elements) {
+    console.log(element.tagName)
+}
+</script>
+```
+
+## Metodlar
+
+### `after()` ve `before()`
+
+Seçilen elemanın öncesine ve sonrasına öğe eklemek için kullanılır.
+
+```html
+<div id="test">test div</div>
+
+<script>
+let div = document.getElementById('test')
+
+let h1 = document.createElement('h1')
+h1.textContent = 'baslik'
+
+let p = document.createElement('p')
+p.textContent = 'paragraf'
+
+div.before(h1)
+div.after(p)
+</script>
+```
+
+### `append()` ve `prepend()`
+
+Seçilen elemanın başına ve sonuna öğe eklemek için kullanılır. `after()` ve `before()` metodlarından farklı olarak bu iki metod ile seçilen öğenin içinde öncesine ve sonrasına öğeler eklenir.
+
+```html
+<div id="test" style="border: 10x solid red">test div</div>
+
+<script>
+let div = document.getElementById('test')
+
+let h1 = document.createElement('h1')
+h1.textContent = 'baslik'
+
+let p = document.createElement('p')
+p.textContent = 'paragraf'
+
+div.prepend(h1)
+div.append(p)
+</script>
+```
+
+### `closest()`
+
+Seçilen elemana en yakın belirtilen öğeyi döndürür.
+
+```html
+<ul>
+  <li>liste</li>
+  <li>liste</li>
+  <li>
+    liste
+    <ul>
+      <li>liste</li>
+      <li>liste</li>
+      <li>liste</li>
+      <li>
+        liste
+        <ul>
+          <li>liste</li>
+          <li>liste</li>
+          <li>liste</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>liste</li>
+  <li>liste</li>
+</ul>
+
+<script>
+const liElements = document.querySelectorAll('li')
+
+for (const li of liElements) {
+    li.addEventListener('click', e => {
+        //e.stopPropagation()
+        console.log(
+            li.closest('ul')
+        )
+    })
+}
+</script>
+```
+
+### `getBoundingClientRect()`
+
+Seçilen öğenin boyutlarını ve pozisyon bilgilerini DOMRect objesi olarak döndürür.
+
+```html
+<div id="test">
+  test div
+</div>
+
+<script>
+console.log(
+    document.getElementById('test').getBoundingClientRect()
+)
+</script>
+```
+
+### `hasAttribute()`
+
+Seçilen elemana ait belirlenen niteliğin olup olmadığını kontrol eder.
+
+```html
+<a href="https://prototurk.com">prototurk</a>
+<a href="https://youtube.com/prototurkcom" title="Prototurk youtube kanalı">prototurk youtube</a>
+
+<script>
+const aElements = document.querySelectorAll('a')
+
+for (const a of aElements) {
+    if (a.hasAttribute('title')) {
+        a.style.backgroundColor = 'yellow'
+    }
+}
+</script>
+```
+
+
+### `hasAttributes()`
+
+Seçilen elemana ait herhangi bir nitelik olup olmadığını kontrol eder.
+
+```html
+<h1>başlık</h1>
+<h1 title="örnek başlık">başlık 2</h1>
+
+<script>
+const h1Elements = document.querySelectorAll('h1')
+
+for (const h1 of h1Elements) {
+    if (!h1.hasAttributes()) {
+        h1.style.backgroundColor = 'yellow'
+    }
+}
+</script>
+```
