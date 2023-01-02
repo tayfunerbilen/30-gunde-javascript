@@ -360,7 +360,6 @@ for (const a of aElements) {
 </script>
 ```
 
-
 ### `hasAttributes()`
 
 Seçilen elemana ait herhangi bir nitelik olup olmadığını kontrol eder.
@@ -377,5 +376,48 @@ for (const h1 of h1Elements) {
         h1.style.backgroundColor = 'yellow'
     }
 }
+</script>
+```
+
+### `matched()`
+
+Seçilen elemanın belirtilen css seçicisiyle eşleşip eşleşmediğini kontrol eder.
+
+
+```html
+<button type="button">buton</button>
+<button type="submit">submit button</button>
+<button type="reset">reset button</button>
+<button disabled type="submit">disabled submit button</button>
+
+<script>
+const buttons = document.querySelectorAll('button')
+
+for (const button of buttons) {
+    // tipi submit olan ve disabled olan oge olup olmadini kontrol et
+    console.log(
+        button.matches('[type=submit][disabled]'),
+        button
+    )
+}
+</script>
+```
+
+### `toggleAttribute()`
+
+Seçilen elemana belirtilen nitelik varsa kaldırılmasını yoksa eklenmesini sağlar.
+
+
+```html
+<input type="text" />
+<button>toggle</button>
+
+<script>
+const button = document.querySelector('button')
+const input = document.querySelector('input')
+  
+button.addEventListener('click', () => {
+  input.toggleAttribute('disabled')
+})
 </script>
 ```
