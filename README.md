@@ -26,3 +26,5 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [18. Gün - Promise, Fetch, Async/Await](https://www.youtube.com/watch?v=abyMOwipR9E)
 * [19. Gün - Closure](https://www.youtube.com/watch?v=Pe3XVMooHVc)
 * [20. Gün - Temiz Kod Yazmak](https://www.youtube.com/watch?v=XPa5yQIm5NM)
+* [21. Gün - DOM](https://www.youtube.com/watch?v=Z7L1M9iHMi4)
+* [22. Gün - DOM 2](https://www.youtube.com/watch?v=F1ehrtj2vWE)
