@@ -341,6 +341,58 @@ console.log(
 </script>
 ```
 
+### `matched()`
+
+Seçilen elemanın belirtilen css seçicisiyle eşleşip eşleşmediğini kontrol eder.
+
+
+```html
+<button type="button">buton</button>
+<button type="submit">submit button</button>
+<button type="reset">reset button</button>
+<button disabled type="submit">disabled submit button</button>
+
+<script>
+const buttons = document.querySelectorAll('button')
+
+for (const button of buttons) {
+    // tipi submit olan ve disabled olan oge olup olmadini kontrol et
+    console.log(
+        button.matches('[type=submit][disabled]'),
+        button
+    )
+}
+</script>
+```
+
+### `setAttribute()`
+
+Seçilen elemana belirtilen niteligi ekler.
+
+```html
+<a href="https://prototurk.com">prototurk</a>
+
+<script>
+const a = document.querySelector('a')
+a.setAttibute('target', '_blank')
+</script>
+```
+
+### `getAttribute()`
+
+Seçilen elemana ait belirtilen niteligi dondurur.
+
+```html
+<a href="https://prototurk.com">prototurk</a>
+
+<script>
+const a = document.querySelector('a')
+console.log(
+    a.getAttribute('href')
+)
+</script>
+```
+
 ### `hasAttribute()`
 
 Seçilen elemana ait belirlenen niteliğin olup olmadığını kontrol eder.
@@ -375,30 +427,6 @@ for (const h1 of h1Elements) {
     if (!h1.hasAttributes()) {
         h1.style.backgroundColor = 'yellow'
     }
-}
-</script>
-```
-
-### `matched()`
-
-Seçilen elemanın belirtilen css seçicisiyle eşleşip eşleşmediğini kontrol eder.
-
-
-```html
-<button type="button">buton</button>
-<button type="submit">submit button</button>
-<button type="reset">reset button</button>
-<button disabled type="submit">disabled submit button</button>
-
-<script>
-const buttons = document.querySelectorAll('button')
-
-for (const button of buttons) {
-    // tipi submit olan ve disabled olan oge olup olmadini kontrol et
-    console.log(
-        button.matches('[type=submit][disabled]'),
-        button
-    )
 }
 </script>
 ```
