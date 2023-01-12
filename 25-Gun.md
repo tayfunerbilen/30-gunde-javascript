@@ -120,7 +120,7 @@ Kullanıcıdan bilgi aldığımız `input` ve `textarea` elemanlarında seçilen
 <script>
   const textarea = document.getElementById('test-textarea')
 
-  textarea.addEventListener('mouseup', () => {
+  textarea.addEventListener('select', () => {
       console.log(
           textarea.value.substring(
               textarea.selectionStart,
@@ -166,7 +166,7 @@ Başlangıç ve bitiş indislerine göre seçilen değeri belirlene değer ile d
 		)
 	}))
 
-	textarea.addEventListener('mouseup', () => {
+	textarea.addEventListener('select', () => {
 		selection.start = textarea.selectionStart
 		selection.end = textarea.selectionEnd
 	})
@@ -226,6 +226,25 @@ Belirlenen başlangıç ve bitiş değerlerini `input` ya da `textarea` içinde 
 		inputs.forEach(input => {
 			input.stepDown()
 		})
+	})
+</script>
+```
+
+## `showPicker()`
+
+Farklı tiplerdeki inputların dialoglarını açmak için kullanılır.
+
+```html
+<input type="color"/>
+<input type="file"/>
+<input type="date"/>
+<button>Show All</button>
+<script>
+	const input = document.querySelector('input')
+	const button = document.querySelector('button')
+
+	button.addEventListener('click', async () => {
+		await input.showPicker()
 	})
 </script>
 ```
