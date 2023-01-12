@@ -24,7 +24,7 @@ Belirtilen css özelliği tanımlamamızı sağlar. 3. parametre olarak `importa
 </script>
 ```
 
-## `removeProperty()`
+### `removeProperty()`
 
 Seçilen css özelliğini kaldırır. 
 
@@ -41,7 +41,7 @@ Seçilen css özelliğini kaldırır.
 </script>
 ```
 
-## `getPropertyValue()`
+### `getPropertyValue()`
 
 Seçilen css özelliğinin değerini döndürür.
 
@@ -60,7 +60,7 @@ Seçilen css özelliğinin değerini döndürür.
 </script>
 ```
 
-## `getPropertyPriority()`
+### `getPropertyPriority()`
 
 Seçilen css özelliğinin `important` olup olmadığını döndürür. Çok önemli bir metod değil ancak bir gün mutlaka işe yarayacağı bir yer çıkar, bilmekte fayda var.
 
@@ -103,4 +103,129 @@ mq.addEventListener('change', e => {
 })
 ```
 
-..... DEVAM EDECEK .....
+## `designMode`
+
+Bir belgenin tasarım modunda olup olmadığını belirlememizi sağlar.
+
+```js
+document.designMode = 'on'
+```
+
+## `selectionStart` ve `selectionEnd`
+
+Kullanıcıdan bilgi aldığımız `input` ve `textarea` elemanlarında seçilen yazının başlangıç ve bitiş indis değerlerini döndürür. Örneğin textarea içinde seçilen yazıyı şöyle konsola basabilirdik.
+
+```html
+<textarea id="test-textarea">textarea mesela</textarea>
+<script>
+  const textarea = document.getElementById('test-textarea')
+
+  textarea.addEventListener('mouseup', () => {
+      console.log(
+          textarea.value.substring(
+              textarea.selectionStart,
+              textarea.selectionEnd
+          )
+      )
+  })
+</script>
+```
+
+##  `setRangeText()`
+
+Başlangıç ve bitiş indislerine göre seçilen değeri belirlene değer ile değiştirir. Yukarıdaki örneğimizi biraz daha genişletelim.
+
+```html
+<textarea id="test-textarea">textarea mesela</textarea>
+<button class="button" data-type="bold">Kalın Yap</button>
+<button class="button" data-type="italic">Eğik Yap</button>
+<script>
+	const textarea = document.getElementById('test-textarea')
+	const buttons = document.querySelectorAll('.button')
+	const selection = {}
+
+	buttons.forEach(button => button.addEventListener('click', e => {
+		let selected = textarea.value.substring(
+			selection.start,
+			selection.end
+		)
+		switch (e.target.dataset.type) {
+			case 'bold':
+				selected = `<b>${selected}</b>`
+				break
+			case 'italic':
+				selected = `<i>${selected}</i>`
+				break
+		}
+		textarea.focus()
+		textarea.setRangeText(
+			selected,
+			selection.start,
+			selection.end,
+			'end'
+		)
+	}))
+
+	textarea.addEventListener('mouseup', () => {
+		selection.start = textarea.selectionStart
+		selection.end = textarea.selectionEnd
+	})
+</script>
+```
+
+Metodun 4. parametresinde seçimden sonraki konumu ayarlanıyor.
+- `select` - eklme yaptıktan sonra ekleneni seçer
+- `start` - ekleme yaptıktan sonra eklenenin başını seçer
+- `end` - ekleme yaptıktan sonra eklenenin sonunu seçer
+
+## `setSelectionRange()`
+
+Belirlenen başlangıç ve bitiş değerlerini `input` ya da `textarea` içinde seçilmesini sağlar.
+
+```html
+<textarea id="test-textarea">textarea mesela</textarea>
+<button id="button">Belli Bir Yazıyı Seç</button>
+<script>
+	const textarea = document.getElementById('test-textarea')
+	const button = document.getElementById('button')
+
+	button.addEventListener('click', () => {
+		textarea.focus()
+		textarea.setSelectionRange(9, 11)
+	})
+</script>
+```
+
+## `stepUp()` ve `stepDown()` metodları
+
+`input` etiketinde tipi `number`, `time`, `date`, `range`, `month`, `week` olan bütün etiketlerin değerlerini azaltmak ve artırmak için kullanılır.
+
+```html
+<input type="time" max="17:00" step="900"/> <br>
+<input type="date" max="2019-12-25" step="7"/> <br>
+<input type="month" max="2019-12" step="12"/> <br>
+<input type="number" max="50" step="5"> <br>
+<input type="range" value="1" max="10" min="-4">
+
+<hr>
+
+<button id="increment-button">Artır</button>
+<button id="decrement-button">Azalt</button>
+<script>
+	const inputs = document.querySelectorAll('input')
+	const incrementButton = document.getElementById('increment-button')
+	const decrementButton = document.getElementById('decrement-button')
+
+	incrementButton.addEventListener('click', () => {
+		inputs.forEach(input => {
+			input.stepUp()
+		})
+	})
+
+	decrementButton.addEventListener('click', () => {
+		inputs.forEach(input => {
+			input.stepDown()
+		})
+	})
+</script>
+```
