@@ -29,5 +29,5 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [21. Gün - DOM](https://www.youtube.com/watch?v=Z7L1M9iHMi4)
 * [22. Gün - DOM 2](https://www.youtube.com/watch?v=F1ehrtj2vWE)
 * [23. Gün - DOM 3 - Olaylar](https://www.youtube.com/watch?v=uMJBoDAsmYs)
-* [24. Gün - Element](https://www.youtube.com/watch?v=CtpoIiAqi9Y)
-* [25. Gün](https://www.youtube.com/watch?v=Oa6994-dsc8)
+* [24. Gün - Element](https://www.youtube.com/watch?v=CtpoIiAqi9Y) ([Dökümantasyon](./24-Gun.md))
+* [25. Gün](https://www.youtube.com/watch?v=Oa6994-dsc8) ([Dökümantasyon](./25-Gun.md))
