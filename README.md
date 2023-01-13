@@ -30,3 +30,4 @@ Ayrıca serinin videolarını da şöyle bırakalım:
 * [22. Gün - DOM 2](https://www.youtube.com/watch?v=F1ehrtj2vWE)
 * [23. Gün - DOM 3 - Olaylar](https://www.youtube.com/watch?v=uMJBoDAsmYs)
 * [24. Gün - Element](https://www.youtube.com/watch?v=CtpoIiAqi9Y)
+* [25. Gün](https://www.youtube.com/watch?v=Oa6994-dsc8)
