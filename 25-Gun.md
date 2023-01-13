@@ -59,7 +59,7 @@ test3.addEventListener('click', e => {
 
 ## `CSSStyleDeclaration`
 
-Javascript'de css özellikleri eklemek için `style` objesi içinde tanımlamayı öğrenmiştik. Gelin bir de bunları metodlar yardımıyla nasıl yapabileceğimize bir bakalım.
+Javascript'de css özellikleri eklemek için `style` objesi içinde tanımlamayı öğrenmiştik. `document.styleSheet` objesi içindeki stilleri değiştirmek, güncellemek, kaldırmak ya da değerini çekmek içinse kullanabileceğimiz bazı metodlar mevcut.
 
 ### `setProperty()`
 
@@ -69,13 +69,12 @@ Belirtilen css özelliği tanımlamamızı sağlar. 3. parametre olarak `importa
 <h1>prototurk.com</h1>
 <style>
     h1 {
-        color: red !important;
+        color: red;
     }
 </style>
 <script>
-    const h1 = document.querySelector('h1')
-    h1.style.setProperty('color', 'blue')
-    //h1.style.setProperty('color', 'blue', 'important')
+    document.styleSheets[0].cssRules[0].style.setProperty('color', 'blue')
+    //document.styleSheets[0].cssRules[0].style.setProperty('color', 'blue', 'important')
 </script>
 ```
 
@@ -91,8 +90,7 @@ Seçilen css özelliğini kaldırır.
     }
 </style>
 <script>
-    const h1 = document.querySelector('h1')
-    h1.style.removeProperty('color')
+    document.styleSheets[0].cssRules[0].style.removeProperty('color')
 </script>
 ```
 
@@ -108,9 +106,8 @@ Seçilen css özelliğinin değerini döndürür.
     }
 </style>
 <script>
-    const h1 = document.querySelector('h1')
     console.log(
-      h1.style.getPropertyValue('color')
+      document.styleSheets[0].cssRules[0].style.getPropertyValue('color')
     )
 </script>
 ```
@@ -127,9 +124,8 @@ Seçilen css özelliğinin `important` olup olmadığını döndürür. Çok ön
     }
 </style>
 <script>
-    const h1 = document.querySelector('h1')
     console.log(
-      h1.style.getPropertyPriority('color') === 'important' ? 'important kullanilmis' : 'cokta onemli degil!'
+      document.styleSheets[0].cssRules[0].style.getPropertyPriority('color') === 'important' ? 'important kullanilmis' : 'cokta onemli degil!'
     )
 </script>
 ```
@@ -298,8 +294,8 @@ Farklı tiplerdeki inputların dialoglarını açmak için kullanılır.
 	const input = document.querySelector('input')
 	const button = document.querySelector('button')
 
-	button.addEventListener('click', async () => {
-		await input.showPicker()
+	button.addEventListener('click', () => {
+		input.showPicker()
 	})
 </script>
 ```
