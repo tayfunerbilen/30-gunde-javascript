@@ -2,6 +2,61 @@
 
 Seriye kaldığımız yerden devam ediyoruz ve bugünde farklı farklı özellikleri öğrenmeye devam edeceğiz.
 
+## `preventDefault`
+
+Bazı etiketlerin varsayılan davranışları vardır. Örneğin bir `a` etiketine basınca ilgili linke yönlendirilirsiniz, ya da form içinde tipi submit olan bir `button` a basınca formu gönderir vs. Bu gibi varsayılan davranışları engellemek için `preventDefault` kullanabilirsiniz. Örneğin;
+
+```html
+<a href="about.html">Hakkimda</a>
+<a href="https://prototurk.com">prototurk.com</a>
+<script>
+	const aTags = document.querySelectorAll('a')
+	aTags.forEach(a => {
+		a.addEventListener('click', e => {
+			// eger link dis bir baglanti iceriyorsa
+			// varsayilan davranisi engelle
+			if (e.target.getAttribute('href').includes('http')) {
+				if (!confirm('Guvenli olmayan bir siteye gitmeye calisiyorsunuz?')) {
+					e.preventDefault()
+				}
+			}
+		})
+	})
+</script>
+```
+
+## `stopPropagation`
+
+Varsayılan yayılmayı engellemek içinse bu özellik kullanılır. Bunu bir örnekle anlatmak gerekirse, iç içe 3 tane etiketimiz olduğunu düşünelim. Ve bu 3 etiketin de bir `click` olayı olsun. Eğer 3. etikete tıklarsam, ne olmasını beklerim? Gelin bir bakalım.
+
+```html
+<div class="test1">
+    test1
+    <div class="test2">
+        test2
+        <div class="test3">test3</div>
+    </div>
+</div>
+<script>
+	const test1 = document.querySelector('.test1')
+	const test2 = document.querySelector('.test2')
+	const test3 = document.querySelector('.test3')
+
+    test2.addEventListener('click', e => console.log('test2 tiklandi'))
+    test1.addEventListener('click', e => console.log('test1 tiklandi'))
+    test3.addEventListener('click', e => console.log('test3 tiklandi'))
+</script>
+```
+
+Evet eğer `test3` e tıklarsam sırasıyla 3, 2 ve 1. etiketlerin console değerlerini görüyorum. Ama bazı durumlarda ben sadece test3'e tıkladığım olayın çalışmasını ve yayılmayı durdurmak isteyebilirim. İşte o zaman şöyle bir kod yazmam yeterliydi.
+
+```js
+test3.addEventListener('click', e => {
+    e.stopPropagation()
+    console.log('test3 tiklandi')
+})
+```
+
 ## `CSSStyleDeclaration`
 
 Javascript'de css özellikleri eklemek için `style` objesi içinde tanımlamayı öğrenmiştik. Gelin bir de bunları metodlar yardımıyla nasıl yapabileceğimize bir bakalım.
