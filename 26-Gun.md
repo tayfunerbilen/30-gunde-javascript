@@ -170,5 +170,97 @@ Form öğesinin geçerli olup olmadığını döndürür.
 </script>
 ```
 
+## Event() ve dispatchEvent()
 
-........ DEVAM EDECEK .......
+Bir olayı simüle etmek için bu sınıfı kullanıyoruz. Örneğin bir button'a click olayı tanımlayalım ve bunu programlamatik olarak simüle edelim. Simüle edebilmek içinse `dispatchEvent()` metoduna parametre olarak `Event()` sınıfını geçiyoruz.
+
+```html
+<button id="btn">bana tıkla</button>
+<script>
+	const btn = document.getElementById('btn')
+	btn.addEventListener('click', e => {
+		console.log('butona tikladin')
+	})
+
+  btn.dispatchEvent(new Event('click')) // olayi gerceklestir
+</script>
+```
+
+ayrıca bir olayın kullanıcı tarafından mı yoksa programlamatik olarak mı olduğunu tespit etmek için `e.isTrusted` özellliğine bakılabilir.
+
+```html
+<button id="btn">bana tıkla</button>
+<script>
+	const btn = document.getElementById('btn')
+	btn.addEventListener('click', e => {
+		if (e.isTrusted) {
+			console.log('butona kullanici bizzat tikladi')
+		} else {
+			console.log('butona tiklama simulasyonu')
+		}
+	})
+	btn.dispatchEvent(new Event('click')) // olayi gerceklestir
+</script>
+```
+
+## customEvent()
+
+Bazen önceden tanımlı olaylar yerine özel olayları tetiklemek isteyebiliriz. Örneğin bir tab uygulaması yapalım ve tab değiştiğinde bir özel olay fırlatıp bunu yakalayalım.
+
+```html
+<style>
+  .active {
+      background: yellow;
+  }
+</style>
+
+<div id="tab">
+  <nav>
+    <button>tab 1</button>
+    <button>tab 2</button>
+  </nav>
+  <div>
+    <section>content 1</section>
+    <section>content 2</section>
+  </div>
+</div>
+
+<script>
+  const tab = document.getElementById('tab')
+  const items = tab.querySelectorAll('nav button')
+  const contents = tab.querySelectorAll('section')
+
+  // ilk elemana active classi ekleyelim
+  items[0].classList.add('active');
+
+  // ilk eleman haric digerlerini gizleyelim
+  [...contents].filter((item, key) => key !== 0).forEach(content => content.style.display = 'none')
+
+  // tab degistirme
+  items.forEach((item, index) => item.addEventListener('click', e => {
+		items.forEach((item, i) => {
+			if (i === index) {
+				item.classList.add('active')
+      } else {
+				item.classList.remove('active')
+      }
+    })
+    contents.forEach(content => content.style.display = 'none')
+    contents[index].style.display = 'block'
+
+    // tabChanged adinda ozel bir olay tetikleyelim
+    tab.dispatchEvent(
+			new CustomEvent('tabChanged', {
+				detail: {
+					tab: index
+				}
+			})
+    )
+  }))
+
+  // ozel olayi dinleyelim
+  tab.addEventListener('tabChanged', e => {
+		console.log('tab degisti', e.detail)
+  })
+</script>
+```
