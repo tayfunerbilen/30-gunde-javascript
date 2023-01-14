@@ -2,7 +2,7 @@
 
 ## elements
 
-Form öğelerinin tamamını `elements` özelliği ile alabiliriz. Örneğin:
+Bir html öğesinin öğelerinin tamamını `elements` özelliği ile alabiliriz. Örneğin:
 
 ```html
 <form action="" id="form1" novalidate>
