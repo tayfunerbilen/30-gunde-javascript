@@ -34,6 +34,42 @@ Dökümandaki tüm form elemanlarını döndürür. Ulaşmak için form elemanı
 </script>
 ```
 
+## submit()
+
+Bir formu programlamatik olarak göndermek isterseniz bu metodu kullanabilirsiniz.
+
+```html
+<form action="" id="form1">
+  <input type="text" name="username"> <br>
+  <button type="button">Gönder</button>
+</form>
+
+<script>
+	const btn = document.querySelector('button')
+	btn.addEventListener('click', () => {
+		document.forms.form1.submit()
+	})
+</script>
+```
+
+## reset()
+
+Bir formu varsayılan değerlerine programlamatik olarak döndürmek isterseniz bu metodu kullanabilirsiniz.
+
+```html
+<form action="" id="form1">
+  <input type="text" name="username"> <br>
+  <button type="submit">Gönder</button>
+</form>
+
+<script>
+	document.forms.form1.addEventListener('submit', e => {
+		e.preventDefault()
+		e.target.reset()
+	})
+</script>
+```
+
 ## Validation
 
 Form elemanlarının geçerli olup olmadığını kontrol edebildiğimiz bir çok yol olmasına rağmen, size en basit ve javascript'de ekstra kod yazmadan kontrol yapabileceğiniz bazı metod ve objeleri göstermek istiyorum.
