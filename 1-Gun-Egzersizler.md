@@ -1,94 +1,86 @@
 # 1. Gün Egzersizleri
 
-1. "Yorumlar, kodu daha okunabilir kılar" yazan tek satırlık bir yorum yazın.
+1. Tek satırlık bir yorum yazın, yorumlar kodu okunabilir kılar:
 
 ```js
-// Yorumlar, kodu daha okunabilir kılar
+// Yorumlar kodu okunabilir kılar
 ```
 
-2. "30 Günde Javascript" yazan bir başka yorum yazın.
+2. Başka bir tek satırlık yorum yazın, 30DaysOfJavaScript'e Hoş Geldiniz:
 
 ```js
-// 30 Günde Javascript
+// 30DaysOfJavaScript'e Hoş Geldiniz
 ```
 
-3.  "Yorumlar, kodu daha okunabilir kılar, yeniden kullanmayı kolaylaştırır ve bilgilendiricidir." yazan çok satırlı bir yorum yazın.
+3. Yorumlar kodu okunabilir, yeniden kullanılabilir ve bilgilendirici hale getirebilir diyen çok satırlı bir yorum yazın:
 
 ```js
 /*
-  Yorumlar, kodu daha okunablir kılar,
-  yeniden kullanmayı kolaylaştırır
-  ve bilgilendiricidir.
+Yorumlar kodu okunabilir hale getirebilir,
+kodu yeniden kullanılabilir kılar
+ve bilgilendirici olur
 */
 ```
 
-4. `variable.js` adında bir javascript dosyası oluşturun ve `string`, `boolean`, `undefined` ve `null` veri türünde değişkenler tanımlayın.
+4. `variable.js` adında bir dosyası oluşturun ve değişkenleri tanımlayın ve `string`, `boolean`, `undefined` ve `null` veri türlerini atayın:
 
 ```js
-// variable.js
-let repo = '30 günde javascript'
-let isForked = false
-let test // değer atanmamışsa undefined olarak belirlenir
-let isOkay = null
+let myString = "Hello, World!";
+let myBoolean = true;
+let myUndefined;
+let myNull = null;
 ```
 
-5. `datatypes.js` adında bir javascript dosyası oluşturun ve yukarıdaki değişkenlerin veri türlerini `typeof` kullanarak kontrol edin.
+5. `datatypes.js` adında bir dosyası oluşturun ve JavaScript `typeof` operatörünü farklı veri türlerini kontrol etmek için kullanın. Her değişkenin veri türünü kontrol edin:
 
 ```js
-let repo = '30 günde javascript'
-let isForked = false
-let test // değer atanmamışsa undefined olarak belirlenir
-let isOkay = null
-
-console.log(typeof repo)
-console.log(typeof isForked)
-console.log(typeof test)
-console.log(typeof isOkay)
+console.log(typeof myString); // string
+console.log(typeof myBoolean); // boolean
+console.log(typeof myUndefined); // undefined
+console.log(typeof myNull); // object
 ```
 
-6. Değer atamadan dört farklı değişken tanımlayın.
+6. Değer atanmamış dört değişken tanımlayın:
 
 ```js
-let variable1
-let variable2
-let varitable3
-let variable4
+let a;
+let b;
+let c;
+let d;
 ```
 
-7. Değer atayarak dört farklı değişken tanımlayın.
+7. Atanan değerlere sahip dört değişken bildirin:
 
 ```js
-let variable1 = 'değer 1'
-let variable2 = 15
-let variable3 = false
-let variable4 = null
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
 ```
 
-8. Adınızı, soyadınızı, medeni durumunuzu, ülkenizi ve yaşınnızı tek tek değişken oluşturarak tanımlayın.
+8. Adınızı, soyadınızı, medeni durumunuzu, ülkenizi ve yaşınızı saklamak için değişkenler tanımlayın (çoklu satır):
 
 ```js
-let name = 'Tayfun'
-let surname = 'Erbilen'
-let mariage = false
-let country = 'Türkiye'
-let age = 29
+let firstName = "John";
+let lastName = "Doe";
+let isMarried = false;
+let country = "USA";
+let age = 30;
 ```
 
-9. Adınızı, soyadınızı, medeni durumunuzu, ülkenizi ve yaşınnızı tek seferde değişken oluşturarak tanımlayın.
+9. Adınızı, soyadınızı, medeni durumunuzu, ülkenizi ve yaşınızı saklamak için değişkenler tanımlayın (tek satır):
 
 ```js
-let name = 'Tayfun',
-    surname = 'Erbilen',
-    mariage = false,
-    country = 'Türkiye',
-    age = 29
+let firstName = "John", lastName = "Doe", isMarried = false, country = "USA", age = 30;
 ```
 
-10. `myAge` ve `yourAge` adında iki değişken tanımlayıp değerlerini belirleyin ve aşağıdaki şekilde konsola log basın.
+10. `myAge` ve `yourAge` adında iki değişken tanımlayın ve başlangıç değerlerini atayın. Tarayıcı konsoluna yazdırın:
 
-```
-I am 25 years old.
-You are 30 years old.
+```js
+let myAge = 25;
+let yourAge = 30;
+console.log("I am " + myAge + " years old.");
+console.log("You are " + yourAge + " years old.");
 ```
 
 🎉 Tebrikler :) 2. günün egzersizlerine geçebilirsiniz. 🎉
