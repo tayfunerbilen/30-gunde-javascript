@@ -177,7 +177,7 @@ console.log(
 ### `scrollLeft` ve `scrollTop`
 
 - `scrollLeft` - Scroll olan elemanın soldan mesafesini döndürür. Ayrıca soldan mesafesini ayarlamak içinde aynı özellik kullanılır.
-- `scrollWidth` - Scroll olan elemanın yukarıdan mesafesini döndürür. Ayrıca yukarıdan mesafesini ayarlamak içinde aynı özellik kullanılır.
+- `scrollTop` - Scroll olan elemanın yukarıdan mesafesini döndürür. Ayrıca yukarıdan mesafesini ayarlamak içinde aynı özellik kullanılır.
 
 ```html
 <div class="scroll-content" style="height: 70px; overflow: auto">
