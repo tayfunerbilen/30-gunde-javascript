@@ -1,0 +1,80 @@
+const a = [4, 5, 8, 9];
+const b = [3, 4, 5, 7];
+const countries = ['Finland', 'Sweden', 'Norway'];
+
+// Boş set oluşturma
+const emptySet = new Set();
+console.log(emptySet);
+
+// 0'dan 10'a kadar set oluşturma (dahil)
+const numbersSet = new Set();
+for (let i = 0; i <= 10; i++) {
+  numbersSet.add(i);
+}
+console.log(numbersSet);
+
+// Set'ten eleman silme
+numbersSet.delete(5);
+console.log(numbersSet);
+
+// Set'i temizleme
+numbersSet.clear();
+console.log(numbersSet);
+
+// Array'den 5 string elementi set'e atma
+const stringArray = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+const stringSet = new Set(stringArray);
+console.log(stringSet);
+
+// Ülkeler ve harf sayısı ile Map oluşturma
+const countryMap = new Map();
+countries.forEach(c => countryMap.set(c, c.length));
+console.log(countryMap);
+
+const setA = new Set(a);
+const setB = new Set(b);
+
+// Union (Birleşim)
+const union = new Set([...setA, ...setB]);
+console.log(union);
+
+// Intersection (Kesişim)
+const intersection = new Set([...setA].filter(num => setB.has(num)));
+console.log(intersection);
+
+// Difference (Sadece A'da olup B'de olmayanlar)
+const difference = new Set([...setA].filter(num => !setB.has(num)));
+console.log(difference);
+
+const countriesData = [
+  { name: 'Finland', languages: ['Finnish', 'Swedish'] },
+  { name: 'USA', languages: ['English'] },
+  { name: 'Canada', languages: ['English', 'French'] },
+  { name: 'Spain', languages: ['Spanish'] },
+  { name: 'Nigeria', languages: ['English'] },
+  { name: 'France', languages: ['French'] },
+  { name: 'Morocco', languages: ['Arabic', 'French'] },
+];
+
+
+const mostSpokenLanguages = (countries, topN) => {
+  const langCount = {};
+
+  countries.forEach(c => {
+    c.languages.forEach(lang => {
+      langCount[lang] = (langCount[lang] || 0) + 1;
+    });
+  });
+
+  return Object.entries(langCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, topN)
+    .map(([lang, count]) => ({ [lang]: count }));
+};
+
+console.log(mostSpokenLanguages(countriesData, 3));
+console.log(mostSpokenLanguages(countriesData, 10));
+
+const allLanguages = new Set();
+countriesData.forEach(c => c.languages.forEach(lang => allLanguages.add(lang)));
+console.log(`Toplam farklı dil sayısı: ${allLanguages.size}`);
